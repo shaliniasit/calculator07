@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	     <title>Calculator</title>
+		 <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+		 <style>
+		 
+		 body{
+		    background:url(https://i.pinimg.com/736x/f0/99/42/f0994245bffddcd86962856af6170500.jpg);
+			
+		 
+		 }
+		   .prt{
+		      background:hotpink;
+			  min-height:600px;
+			  width:30%;
+			  border-radius:5%;
+			  border:6px outset black;
+			  margin-top:20px;
+			  margin-left:500px;
+	           
+		   
+		   }
+		   .first{
+		       width:90%;
+			   height:100px;
+			   background:lightpink;
+			   margin-top:20px;
+			   margin-left:20px;
+			   border-radius:10px;
+            border:2px solid black;	
+              font-size:30px;
+              text-align:right;			
+			  			   
+			   
+		   }
+		   
+		   .btn1{}
+		   
+		   .btn{
+		      
+			  background:deeppink;
+			  border:1px so;
+			  margin:18px;
+			  height:55px;
+			  border-radius:400px;
+			  font-size:28px;
+			  cursor:pointer;
+			  color:;
+			  
+			 
+			  
+		   }
+		   
+		   .btn:hover{
+		            transform:translateY(-5px) 
+		   
+		   }
+		 </style>
+    </head>
+	<body>
+	 <div class="prt ">
+	 <h1 class="w3-center"><b>Calculator</b></h1>
+	      <input placeholder="0" type="text" readonly class="first w3-opacity" id="calc">
+		  
+	         
+		  
+	      
+		  
+		  <div class="btn1 w3-row w3-center">
+		      <div class="btn w3-col l2 m3 s3 " onclick="clearAll()">
+			  Clr
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3">
+			 √
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3" onclick="back()">
+			 bck
+			</div>
+			
+			<div class="btn w3-col l2 m3 s3">
+			 MRC
+			</div>
+		</div>
+		
+		    <div class="btn1 w3-row w3-center">
+			
+			
+		      <div class="btn w3-col l2 m3 s3 ">
+			  M-
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3">
+			 M+
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3" onclick="add('/')">
+			 /
+			</div>
+			
+			<div class="btn w3-col l2 m3 s3" onclick="add('+')">
+			 +
+			</div>
+		</div>	
+		
+		 <div class="btn1 w3-row w3-center">
+		      <div class="btn w3-col l2 m3 s3 " onclick="add('1')">
+			  1
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3" onclick="add('2')">
+			 2
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3" onclick="add('3')">
+			 3
+			</div>
+			
+			<div class="btn w3-col l2 m3 s3" onclick="add('*')">
+			X
+			</div>
+		</div>	
+		
+		 <div class="btn1 w3-row w3-center">
+		      <div class="btn w3-col l2 m3 s3 " onclick="add('4')">
+			  4
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3" onclick="add('5')">
+			 5
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3" onclick="add('6')">
+			 6
+			</div>
+			
+			<div class="btn w3-col l2 m3 s3" onclick="add('%')" onclick="reminder()">
+			 %
+			</div>
+		</div>	
+		
+		 <div class="btn1 w3-row w3-center">
+		      <div class="btn w3-col l2 m3 s3 " onclick="add('7')">
+			  7
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3" onclick="add('8')">
+			 8
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3" onclick="add('9')">
+			 9
+			</div>
+			
+			<div class="btn w3-col l2 m3 s3" onclick="add('-')">
+			 -
+			</div>
+			</div>
+			
+			<div class="btn1 w3-row w3-center">
+		      <div class="btn w3-col l2 m3 s3 " onclick="add('.')">
+			 . 
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3" onclick="add('0')">
+			 0
+			</div>
+			
+			 <div class="btn w3-col l2 m3 s3" onclick="add('00')">
+			 00
+			</div>
+			
+			<div class="btn w3-col l2 m3 s3" onclick="calculate()">
+			 =
+			</div>
+		</div>
+		</div>	
+		
+		
+	 </div>
+	
+	</body>
+</html>
+<script>
+	let d = document.getElementById("calc");
+	  function add(v){d.value += v; }
+	  function clearAll(){d.value="";}
+	  function back(){d.value =d.value.slice(0,-1);}
+	  function calculate(){
+	    try{ d.value= eval(d.value);}
+		catch { d.value="Error";}
+	  }
+	
+	    
+	</script>
